@@ -1,16 +1,42 @@
 import React from 'react';
 
-function Clock() {
-    var date = new Date();
-    const element = (
-      <div>
-        <h2>It is {date.toDateString() + ", " + date.getUTCHours() + ":" + date.getUTCMinutes()}.</h2>
-      </div>
-    );
-    return element;
-    //ReactDOM.render(element, document.getElementById('root'));
-  }
-  
-  //setInterval(tick, 1000);
+class Clock extends React.Component{
+    
+        constructor(props){
+            super(props);
+            this.state = {date: new Date()};
+        }
+
+        componentDidMount() {
+            this.timerID = setInterval(
+              () => this.tick(),
+              1000
+            );
+          }
+        
+          componentWillUnmount() {
+            clearInterval(this.timerID);
+          }
+        
+          tick() {
+            this.setState({
+              date: new Date()
+            });
+          }
+        
+        render() {
+            return (
+              <div>
+                <FormattedDate date={this.state.date} />
+              </div>
+            );
+        }
+    }
+
+    function FormattedDate(props) {
+        return <h2>{props.date.toLocaleTimeString()}.</h2>;
+      }
+      
+      //setInterval(tick, 1000);
 
   export default Clock;

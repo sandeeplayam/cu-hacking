@@ -16,9 +16,6 @@ function Title(){
           COVID-19 Data Tracker
         </Typography>
         <Clock />
-        <Typography variant="h2" component="h1" gutterBottom>
-            Day:Hour:Minute
-        </Typography>
         </Container>
         </div>
     );
