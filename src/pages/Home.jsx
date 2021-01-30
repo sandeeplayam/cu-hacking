@@ -1,16 +1,16 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import Description from '../components/Home/Description/Description';
+import {Title, Description} from '../components'
 
 function Home() {
   return (
     <div>
-      <h1>COVID BBY</h1>
-      <button> Hello </button>
-      <Button variant="contained" color="primary">
-        Hello World
-      </Button>
+     
+      <Title/>
       <Description />
+      <Button variant="contained" color="primary">
+        See Advanced
+      </Button>
     </div>
   ); //return
 }
