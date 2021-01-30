@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
+import StickyFooter from '../components/Home/StickyFooter';
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
       <Button variant="contained" color="primary">
         Hello World
       </Button>
+      <StickyFooter />
     </div>
   ); //return
 }
