@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import StickyFooter from '../components/Home/StickyFooter';
+import Description from '../components/Home/Description/Description';
 
 function Home() {
   return (
@@ -10,7 +10,7 @@ function Home() {
       <Button variant="contained" color="primary">
         Hello World
       </Button>
-      <StickyFooter />
+      <Description />
     </div>
   ); //return
 }

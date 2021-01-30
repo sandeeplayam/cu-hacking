@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function StickyFooter() {
+function Description() {
   const classes = useStyles();
 
   return (
@@ -58,9 +58,11 @@ function StickyFooter() {
           <br/>
           {'The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).'}
         </Typography>
-        <Typography variant="body1">From the World Health Organization  <a href= "https://www.who.int/health-topics/coronavirus#tab=tab_1"> </a></Typography>
-       
+        <Typography variant="body1">From the World Health Organization  </Typography>
+        <a href= "https://www.who.int/health-topics/coronavirus#tab=tab_1">Visit WHO website for more information. </a>
       </Container>
+      
+
       <footer className={classes.footer}>
         <Container maxWidth="sm">
           <Typography variant="body1">My sticky footer can be found here.</Typography>
@@ -71,4 +73,4 @@ function StickyFooter() {
   );
 }
 
-export default StickyFooter;
+export default Description;
