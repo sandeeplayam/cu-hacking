@@ -8,6 +8,9 @@
 # Eslint cache
 .eslintcache
 
+#Environment Variables
+.env
+
 # testing
 /coverage
 

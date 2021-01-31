@@ -1,13 +1,22 @@
 import React from 'react';
-import { CountrySelector, Cards, Graph } from '../components';
 import styles from './Dashboard.module.css';
+import { Header } from '../components';
 
 function Dashboard() {
   return (
-    <div className={styles.container}>
-      <CountrySelector />
-      <Graph />
-      <Cards />
+    <div className="app">
+      <Header />
+      {/* Header */}
+      {/* Title + Select input dropdown field */}
+
+      {/* Info */}
+      {/* Info */}
+      {/* Info */}
+
+      {/* Table */}
+      {/* Chart */}
+
+      {/* leaflet map */}
     </div>
   );
 }
