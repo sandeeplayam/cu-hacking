@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Description
 
 A COVID-19 Stat Tracker built with Javascript and React.
 Features two pages: Home page and Dashboard.
