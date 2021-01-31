@@ -9,12 +9,18 @@ import {
 import { DetailBox, WorldMap, Grid, LineChart } from '../components';
 import styles from './Dashboard.module.css';
 import { sortData } from '../helpers/util';
+import 'leaflet/dist/leaflet.css';
+import numeral from 'numeral';
 
 function Dashboard() {
   const [countries, setCountries] = useState([]);
   const [country, setCountry] = useState('worldwide');
   const [countryInfo, setCountryInfo] = useState({});
   const [gridData, setGridData] = useState([]);
+  const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
+  const [mapZoom, setMapZoom] = useState(3);
+  const [mapCountries, setMapCountries] = useState([]);
+  const [casesType, setCasesType] = useState('cases');
 
   const onCountryChange = async (e) => {
     const countryCode = e.target.value;
@@ -30,6 +36,9 @@ function Dashboard() {
       .then((data) => {
         setCountry(countryCode);
         setCountryInfo(data);
+
+        setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
+        setMapZoom(4);
       });
   };
 
@@ -54,6 +63,7 @@ function Dashboard() {
           const sortedData = sortData(data);
           setGridData(sortedData);
           setCountries(countries);
+          setMapCountries(data);
         });
     };
 
@@ -84,23 +94,30 @@ function Dashboard() {
         </div>
         <div className={styles.dashboard__details}>
           <DetailBox
+            onClick={(e) => setCasesType('cases')}
             title="Infected"
-            cases={countryInfo.todayCases}
-            total={countryInfo.cases}
+            cases={numeral(countryInfo.todayCases).format('0,0')}
+            total={numeral(countryInfo.cases).format('0,0')}
           />
           <DetailBox
+            onClick={(e) => setCasesType('recovered')}
             title="Recovered"
-            cases={countryInfo.todayRecovered}
-            total={countryInfo.recovered}
+            cases={numeral(countryInfo.todayRecovered).format('0,0')}
+            total={numeral(countryInfo.recovered).format('0,0')}
           />
           <DetailBox
+            onClick={(e) => setCasesType('deaths')}
             title="Deaths"
-            cases={countryInfo.todayDeaths}
-            total={countryInfo.deaths}
+            cases={numeral(countryInfo.todayDeaths).format('0,0')}
+            total={numeral(countryInfo.deaths).format('0,0')}
           />
         </div>
-        <WorldMap />
-        {/* leaflet map */}
+        <WorldMap
+          casesType={casesType}
+          countries={mapCountries}
+          center={mapCenter}
+          zoom={mapZoom}
+        />
       </div>
       <Card className={styles.dashboard__right}>
         <CardContent>

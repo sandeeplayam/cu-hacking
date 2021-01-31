@@ -1,14 +1,15 @@
 import React from 'react';
 import { Card, CardContent, Typography } from '@material-ui/core';
+import styles from './DetailBox.module.css';
 
-function DetailBox({ title, cases, total }) {
+function DetailBox({ title, cases, total, ...props }) {
   return (
-    <Card>
+    <Card onClick={props.onClick} className={styles.detailBox}>
       <CardContent>
         <Typography color="textSecondary">{title}</Typography>
-        <h2>{cases}</h2>
+        <h2 className={styles.detailBox__cases}>{cases}</h2>
         <Typography color="textSecondary">
-          <p>{total} Total</p>
+          <p className={styles.detailBox__total}>{total} Total</p>
         </Typography>
       </CardContent>
     </Card>
