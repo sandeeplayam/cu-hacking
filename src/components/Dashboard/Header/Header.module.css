@@ -2,7 +2,9 @@
   margin: 0;
 }
 
-.app__header {
+.dashboard__header {
   display: flex;
-  text-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
 }
