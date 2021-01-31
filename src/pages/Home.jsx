@@ -12,6 +12,8 @@ function Home() {
       <br/>
       <br/>
       <AdvancedStatsButton />
+      <br/>
+      <br/>
       <Description />
     </div>
   ); //return

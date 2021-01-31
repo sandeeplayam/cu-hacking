@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
+import styles from './Description.module.css';
 
 function Copyright() {
   return (
@@ -18,35 +19,15 @@ function Copyright() {
   );
 }
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    minHeight: '100vh',
-  },
-  main: {
-    marginTop: theme.spacing(8),
-    marginBottom: theme.spacing(2),
-  },
-  footer: {
-    padding: theme.spacing(3, 2),
-    marginTop: 'auto',
-    backgroundColor:
-      theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[800],
-  },
-}));
-
 function Description() {
-  const classes = useStyles();
-
   return (
-    <div className={classes.root}>
+    <div className={styles.root}>
       <CssBaseline />
-      <Container component="main" className={classes.main} maxWidth="sm">
-        <Typography variant="h3" component="h1" gutterBottom>
+      <Container component="main" className={styles.main} maxWidth="md">
+        <h3 className={styles.descTitle}>
           COVID-19 Data Tracker
-        </Typography>
-        <Typography variant="h5" component="h2" gutterBottom>
+        </h3>
+        <p className={styles.descContents}>
           {'Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.'}
           <br/>
           <br/>
@@ -57,13 +38,13 @@ function Description() {
           <br/>
           <br/>
           {'The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).'}
-        </Typography>
+        </p>
         <Typography variant="body1">From the World Health Organization  </Typography>
         <a href= "https://www.who.int/health-topics/coronavirus#tab=tab_1">Visit WHO website for more information. </a>
       </Container>
       
 
-      <footer className={classes.footer}>
+      <footer className={styles.footer}>
         <Container maxWidth="sm">
           <Typography variant="body1">My sticky footer can be found here.</Typography>
           <Copyright />
