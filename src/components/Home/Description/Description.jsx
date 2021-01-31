@@ -1,7 +1,6 @@
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import styles from './Description.module.css';
@@ -10,9 +9,13 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      <Link color="inherit" href="https://github.com/sandeeplayam">
+        Sudarsana Sandeep
+      </Link>{' & '}
+      <Link color="inherit" href="https://github.com/Simon-Yacoub">
+        Simon Yacoub
       </Link>{' '}
+      
       {new Date().getFullYear()}
       {'.'}
     </Typography>
@@ -23,9 +26,9 @@ function Description() {
   return (
     <div className={styles.root}>
       <CssBaseline />
-      <Container component="main" className={styles.main} maxWidth="md">
+      <Container component="main" className={styles.main} maxWidth="lg">
         <h3 className={styles.descTitle}>
-          COVID-19 Data Tracker
+          COVID-19 Stat Tracker
         </h3>
         <p className={styles.descContents}>
           {'Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.'}
@@ -46,7 +49,10 @@ function Description() {
 
       <footer className={styles.footer}>
         <Container maxWidth="sm">
-          <Typography variant="body1">My sticky footer can be found here.</Typography>
+          <Typography variant="body1">Team SS,<Link color="inherit" href="https://github.com/sandeeplayam/cu-hacking">
+          CuHacking2021!
+          </Link> </Typography>
+          
           <Copyright />
         </Container>
       </footer>

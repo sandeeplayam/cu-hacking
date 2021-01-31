@@ -3,24 +3,37 @@ div.main{
     border-radius: 12px;
     border-color: black;
     border: solid;
+    background-color: darkgray;
+    
 }
 
 div.caseStatBar{
+    color: rgb(72, 233, 72);
+    font-weight: 500;
+    font-size: 64px;
    text-align: center;
     margin: 64px;
     padding-left: 32px;
     border-radius: 12px;
-    border-color: black;
-    border: solid;
+    background-color: lightgrey;
+    box-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
    
 }
 
 div.deathStatBar{
+    color: red;
+    font-weight: 500;
+    font-size: 64px;
     text-align: center;
     margin: 64px;
     padding-left: 32px;
     border-radius: 12px;
+    background-color: lightgrey;
+    box-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    /* border-radius: 12px;
     border-color: black;
-    border: solid;
+    border: solid; */
    
 }
