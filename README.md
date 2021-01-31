@@ -1,5 +1,10 @@
 # Getting Started with Create React App
 
+A COVID-19 Stat Tracker built with Javascript and React.
+Features two pages: Home page and Dashboard.
+Home page displays total cases and deaths. Use "See more covid19 stats" button to go to dashboard
+Dashboard displays avanced statistics and country specific stats
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
