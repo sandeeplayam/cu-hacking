@@ -1,0 +1,27 @@
+div.main{
+    border-radius: 12px;
+    border-color: black;
+    border: solid;
+    margin: 1;
+    padding: 1;
+}
+
+div.caseStatBar{
+   text-align: center;
+    margin: 64px;
+    padding-left: 32px;
+    border-radius: 12px;
+    border-color: black;
+    border: solid;
+   
+}
+
+div.deathStatBar{
+    text-align: center;
+    margin: 64px;
+    padding-left: 32px;
+    border-radius: 12px;
+    border-color: black;
+    border: solid;
+   
+}

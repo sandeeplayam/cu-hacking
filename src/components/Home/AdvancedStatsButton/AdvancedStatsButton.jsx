@@ -1,16 +1,16 @@
 import React from 'react'
-import Button from '@material-ui/core/Button';
 import {useHistory} from 'react-router-dom';
+import styles from './AdvancedStatsButton.module.css';
 
 function AdvancedStatsButton() {
     const history = useHistory();
+    
     const handleOnClick = () => history.push('/Dashboard');
+    
     return (
-        <div>
-        <Button variant="contained" color="primary"  onClick={handleOnClick}>
-          See Advanced
-        </Button>
-        </div>
+        <button className={styles.ASButton} text='AStext' onClick={handleOnClick} >
+        See More Advanced COVID-19 Statistics 
+        </button>
     );
 }
 

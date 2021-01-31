@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Title.module.css';
 
 class Clock extends React.Component{
     
@@ -34,9 +35,7 @@ class Clock extends React.Component{
     }
 
     function FormattedDate(props) {
-        return <h2>{props.date.toLocaleTimeString()}.</h2>;
+        return <div id='dateAndTime'>{props.date.toLocaleTimeString()}</div>;
       }
-      
-      //setInterval(tick, 1000);
 
   export default Clock;
