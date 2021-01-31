@@ -23,10 +23,6 @@ body {
   background-color: #f5f6fa;
 }
 
-* {
-  margin: 0;
-}
-
 .dashboard__header {
   display: flex;
   align-items: center;

@@ -11,7 +11,7 @@ root {
     background-color: #0066ff;
   }
 
-  descTitle{
+  .descTitle{
     border-bottom:  solid;
     border-color: black;
     font-family: sans-serif;
@@ -22,7 +22,7 @@ root {
     
   }
 
-  descContent{
+  .descContent{
     border-bottom:  solid;
     border-color: black;
     font-family: sans-serif;

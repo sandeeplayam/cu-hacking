@@ -8,9 +8,11 @@ function AdvancedStatsButton() {
     const handleOnClick = () => history.push('/Dashboard');
     
     return (
+        <div className={styles.main}>
         <button className={styles.ASButton} text='AStext' onClick={handleOnClick} >
         See More Advanced COVID-19 Statistics 
         </button>
+        </div>
     );
 }
 
