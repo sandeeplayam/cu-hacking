@@ -7,7 +7,9 @@ function DetailBox({ title, cases, total }) {
       <CardContent>
         <Typography color="textSecondary">{title}</Typography>
         <h2>{cases}</h2>
-        <Typography color="textSecondary">{total}</Typography>
+        <Typography color="textSecondary">
+          <p>{total} Total</p>
+        </Typography>
       </CardContent>
     </Card>
   );

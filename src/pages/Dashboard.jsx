@@ -6,13 +6,15 @@ import {
   Select,
   MenuItem,
 } from '@material-ui/core';
-import { DetailBox, WorldMap } from '../components';
+import { DetailBox, WorldMap, Grid, LineChart } from '../components';
 import styles from './Dashboard.module.css';
+import { sortData } from '../helpers/util';
 
 function Dashboard() {
   const [countries, setCountries] = useState([]);
   const [country, setCountry] = useState('worldwide');
   const [countryInfo, setCountryInfo] = useState({});
+  const [gridData, setGridData] = useState([]);
 
   const onCountryChange = async (e) => {
     const countryCode = e.target.value;
@@ -32,6 +34,14 @@ function Dashboard() {
   };
 
   useEffect(() => {
+    fetch('https://disease.sh/v3/covid-19/all')
+      .then((response) => response.json())
+      .then((data) => {
+        setCountryInfo(data);
+      });
+  }, []);
+
+  useEffect(() => {
     const getCountriesInfo = async () => {
       await fetch('https://disease.sh/v3/covid-19/countries')
         .then((response) => response.json())
@@ -41,6 +51,8 @@ function Dashboard() {
             countryCode: country.countryInfo.iso3,
           }));
 
+          const sortedData = sortData(data);
+          setGridData(sortedData);
           setCountries(countries);
         });
     };
@@ -93,9 +105,9 @@ function Dashboard() {
       <Card className={styles.dashboard__right}>
         <CardContent>
           <h3>Live Cases by Country</h3>
-          {/* Table */}
-          <h3>New cases Worldwide</h3>
-          {/* Chart */}
+          <Grid countries={gridData} />
+          <h3>New Cases Worldwide</h3>
+          <LineChart />
         </CardContent>
       </Card>
     </div>
