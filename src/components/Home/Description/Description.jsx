@@ -42,8 +42,8 @@ function Description() {
           <br/>
           {'The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).'}
         </p>
-        <Typography variant="body1">From the World Health Organization  </Typography>
-        <a href= "https://www.who.int/health-topics/coronavirus#tab=tab_1">Visit WHO website for more information. </a>
+        <Typography variant="body1">- From The World Health Organization. <a href= "https://www.who.int/health-topics/coronavirus#tab=tab_1">Visit WHO website for more information. </a> </Typography>
+        <br/>
       </Container>
       
 
