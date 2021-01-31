@@ -9,8 +9,8 @@ function AdvancedStatsButton() {
     
     return (
         <div className={styles.main}>
-        <button className={styles.ASButton} text='AStext' onClick={handleOnClick} >
-        See More Advanced COVID-19 Statistics 
+        <button className={styles.ASButton} onClick={handleOnClick} >
+        <span>See More COVID-19 Stats <strong>>></strong></span>
         </button>
         </div>
     );
