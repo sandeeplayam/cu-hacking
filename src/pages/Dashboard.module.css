@@ -3,6 +3,33 @@
   justify-content: space-between;
 }
 
+.dashboard {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.dashboard__left {
+  flex: 0.9;
+}
+
+@media (max-width: 990px) {
+  .dashboard {
+    flex-direction: column;
+  }
+}
+
 body {
   background-color: #f5f6fa;
+}
+
+* {
+  margin: 0;
+}
+
+.dashboard__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
 }

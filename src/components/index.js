@@ -1,4 +1,3 @@
-export { default as Header } from './Dashboard/Header/Header';
 export { default as DetailBox } from './Dashboard/DetailBox/DetailBox';
 export { default as WorldMap } from './Dashboard/Map/WorldMap';
 export { default as Description } from './Home/Description/Description';
