@@ -1,17 +1,15 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import {Title, Description} from '../components'
+import {Title, Description, AdvancedStatsButton} from '../components'
+import styles from './Home.module.css';
 
 function Home() {
   return (
-    <div>
-     
+    <div className={styles.backing}>
       <Title/>
       <Description />
-      <Button variant="contained" color="primary">
-        See Advanced
-      </Button>
+      <AdvancedStatsButton />
     </div>
   ); //return
 }
+
 export default Home;
